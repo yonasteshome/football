@@ -1,0 +1,106 @@
+/* PremierLeagueTeams.css */
+
+body {
+    background-color: #1e1e1e; /* Dark background for the body */
+    color: #f0f0f0; /* Light text for better visibility */
+}
+
+.team-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 80%; /* Reduced width to 80% */
+    margin: 0 auto; /* Center the team list */
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #2a2a2a; /* Dark background for team cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    text-decoration: none;
+    color: #f0f0f0; /* Light text for team card */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Slightly darker shadow on hover */
+}
+
+.team-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-logo {
+    transform: rotate(360deg);
+}
+
+.team-name {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #ffffff; /* Light text for team names */
+}
+
+.team-description {
+    font-size: 0.9em;
+    color: #cccccc; /* Light gray for team description */
+}
+
+/* Tablet Size */
+@media (max-width: 768px) {
+    .team-list {
+        padding: 10px;
+    }
+
+    .team-card {
+        padding: 15px;
+    }
+
+    .team-logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .team-name {
+        font-size: 1.3em;
+    }
+}
+
+/* Mobile Size */
+@media (max-width: 480px) {
+    .team-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 5px;
+    }
+
+    .team-card {
+        padding: 10px;
+    }
+
+    .team-logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .team-name {
+        font-size: 1.1em;
+    }
+
+    .team-description {
+        font-size: 0.8em;
+    }
+}

@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #ffffff; /* Light text color for dark mode */
+}
+
+.schedule-section {
+    padding: 15px; /* Keep padding around the schedule */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    height: 100vh; /* Full height of the viewport */
+}
+
+.schedule-title {
+    text-align: center;
+    font-size: 28px;
+    color: #ffffff; /* Light text color */
+    margin-bottom: 15px; /* Reduced space below the title */
+}
+
+.schedule-week {
+    margin-bottom: 15px; /* Reduced space between weeks */
+    background-color: #2c2c2c; /* Darker background for weeks */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside each week */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
+
+.week-title {
+    font-size: 24px;
+    color: #4CAF50; /* Green color for week titles */
+    margin-bottom: 10px; /* Space below week title */
+}
+
+.schedule-match {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space between logos and details */
+    padding: 8px; /* Reduced padding inside each match */
+    border-bottom: 1px solid #444444; /* Dark grey bottom border for separation */
+}
+
+.match-details {
+    flex-grow: 1; /* Take up remaining space */
+    text-align: center; /* Center match details */
+}
+
+.match-title {
+    font-weight: bold;
+    font-size: 18px; /* Larger font size for match title */
+    color: #ffffff; /* Light text color */
+}
+
+.match-info {
+    color: #bbbbbb; /* Light grey color for match info */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .schedule-title {
+        font-size: 22px; /* Smaller title on small screens */
+    }
+
+    .week-title {
+        font-size: 20px; /* Smaller week title on small screens */
+    }
+
+    .match-title {
+        font-size: 16px; /* Smaller match title on small screens */
+    }
+
+    .schedule-match {
+        align-items: center; /* Center align items */
+    }
+
+    .match-details {
+        margin: 8px 0; /* Reduced space between logos and details */
+    }
+
+    .team-logo {
+        width: 50px; /* Reduce logo size on small screens */
+        height: auto;
+    }
+}

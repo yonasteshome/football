@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background for the body */
+    color: white;
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    padding-top: 20px; /* Add some padding at the top if needed */
+}
+
+.scoreboard-section {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); /* Softer shadow for depth */
+    background-color: #1f1f1f; /* Darker background for the scoreboard */
+    border-radius: 10px;
+    width: 90%; /* Responsive width */
+    max-width: 1000px; /* Maximum width to prevent stretching on large screens */
+    height: auto; /* Height based on content */
+    display: flex;
+    justify-content: center;
+    margin-left: 9%;
+}
+
+.scoreboard-title {
+    background-color: #4a4a4a; /* Dark grey header */
+    color: #f2a900; /* Golden title text */
+    text-align: center;
+    padding: 15px; /* More space around the title */
+    font-size: 28px; /* Increased font size for title */
+    border-radius: 10px 10px 0 0; /* Rounded corners for the top */
+}
+
+.scoreboard-table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapse borders */
+}
+
+.scoreboard-table th, .scoreboard-table td {
+    padding: 10px; /* Increased space within cells */
+    text-align: center; /* Centered text */
+    font-size: 16px; /* Standard font size for table content */
+    color: #f2f2f2; /* Light text color */
+}
+
+.scoreboard-table th {
+    background-color: #333333; /* Darker grey for table headers */
+    color: #f2a900; /* Golden text for headers */
+}
+
+.scoreboard-team-name {
+    font-weight: bold; /* Bold team names */
+    color: #f2a900; /* Golden team names */
+}
+
+.scoreboard-table tr:nth-child(even) {
+    background-color: #1a1a1a; /* Dark grey for even rows */
+}
+
+.scoreboard-table tr:nth-child(odd) {
+    background-color: #2a2a2a; /* Slightly lighter grey for odd rows */
+}
+
+.scoreboard-table tr:hover {
+    background-color: #3b3b3b; /* Slightly lighter hover effect */
+}
+
+.scoreboard-table td {
+    border-bottom: 1px solid #4a4a4a; /* Subtle border for rows */
+}
+
+/* Golden glow hover effect for better visibility */
+.scoreboard-table th:hover, .scoreboard-table td:hover {
+    background-color: #3a3a3a;
+    color: #f2a900;
+    box-shadow: 0px 0px 5px #f2a900;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .scoreboard-title {
+        font-size: 24px; /* Smaller title on small screens */
+    }
+
+    .scoreboard-table th, .scoreboard-table td {
+        padding: 8px; /* Less padding in cells on small screens */
+        font-size: 14px; /* Smaller font size for better fit */
+    }
+}
